@@ -19,20 +19,23 @@ class Menu():
     def get_item_by_name(self,name):
         for i in self.items:
             if i.name == name:
-               return i
+               return i.get_info()
 
 
     def get_items_by_category(self,category):
         list_category = []
 
         for i in self.items:
+            print(i.category)
             if i.category == category:
-                list_category.append(i)
+                list_category.append(i.get_info())
+
+        return list_category
 
 
     def display_menu(self):
         for i in self.items:
-            print(i.get_info)
+            print(i.get_info())
 
 
     def get_total_items(self):
